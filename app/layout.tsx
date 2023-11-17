@@ -1,8 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import clsx from 'clsx'
+import Header from './components/Header'
+import { Suspense } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+	subsets: ['latin'],
+	display: 'swap',
+  variable: '--font-inter'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +22,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" data-theme="dim" className={clsx(
+			'h-full scroll-smooth bg-base-100 antialiased',
+			inter.variable,
+		)}>
+      <body className="flex h-full flex-col">
+				<Header />
+				<main className='p-5'>
+					{/* <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}> */}
+						{children}
+					{/* </Suspense> */}
+					
+				</main>
+			</body>
     </html>
   )
 }
