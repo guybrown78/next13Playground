@@ -1,5 +1,7 @@
+
 import Link from 'next/link'
 import React from 'react'
+import User from './User'
 
 const HeaderNav = () => {
 	return (
@@ -13,10 +15,13 @@ const HeaderNav = () => {
 				</ul>
 			</li>
 			<li><Link href="/form">Form</Link></li>
+			<User />
 		</>
 	)
 }
 const Header = () => {
+
+
 	return (
 		<div className="navbar bg-base-100">
 			<div className="navbar-start">
@@ -34,6 +39,7 @@ const Header = () => {
 							</ul>
 						</li>
 						<li><Link href="/form">Form</Link></li>
+						<User />
 					</ul>
 				</div>
 				<Link href="/" className="btn btn-ghost text-xl">daisyUI</Link>
@@ -51,6 +57,7 @@ const Header = () => {
 						</details>
 					</li>
 					<li><Link href="/form">Form</Link></li>
+					<User />
 				</ul>
 			</div>
 			<div className="navbar-end">
@@ -62,13 +69,8 @@ const Header = () => {
 					<ul tabIndex={0} className="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
 						<li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Light" value="light"/></li>
 						<li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Dark" value="dark"/></li>
-						{/* <li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Garden" value="garden"/></li>
-						<li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Forest" value="forest"/></li> */}
 						<li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Winter" value="winter"/></li>
 						<li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Dim" value="dim"/></li>
-						{/* <li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Nord" value="nord"/></li>
-						<li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Night" value="night"/></li>
-						<li><input type="radio" name="theme-dropdown" className="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Dracula" value="dracula"/></li> */}
 					</ul>
 				</div>
 			</div>
