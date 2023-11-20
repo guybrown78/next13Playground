@@ -13,6 +13,14 @@ const nextConfig = {
 	// 			'@react-email/tailwind'
 	// 	]
 	// },
+	images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'bit.ly',
+      },
+    ],
+  },
 }
 
 
