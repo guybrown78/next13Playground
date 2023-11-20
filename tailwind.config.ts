@@ -13,6 +13,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+			fontFamily:{
+				poppins: 'var(--font-local-poppins)'
+			},
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

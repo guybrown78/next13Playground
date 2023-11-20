@@ -4,6 +4,7 @@ import ProductCard from '@/app/components/ProductCard'
 import { getServerSession } from 'next-auth'
 import { authOptions } from './api/auth/[...nextauth]/route'
 import juninho from '@/public/images/juninho.webp';
+import HeavyComponentWrapper from './components/HeavyComponentWrapper'
 
 export default async function Home() {
 
@@ -14,6 +15,8 @@ export default async function Home() {
 			<Link href="/users">Users</Link>
 			<ProductCard />
 			<Image src={juninho} alt="The real Juninho" />
+
+			<HeavyComponentWrapper />
 
 			<div className='relative block max-w-5xl h-96 overflow-hidden'>
 				<Image 
