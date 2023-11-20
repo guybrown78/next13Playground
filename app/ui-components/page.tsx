@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const UiComponentsPage = () => {
+const UiComponentsPage = () => {
 	return (
 		<div>UiComponentsPage</div>
 	)
 }
+
+export default UiComponentsPage
